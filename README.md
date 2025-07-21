@@ -1,7 +1,6 @@
 # Digital Clock: Precision & Aesthetics
 
-![Digital Clock Banner](https://via.placeholder.com/1200x400?text=Your+Project+Banner+Here)
-*Replace this placeholder with an actual banner/hero image of your clock if you have one.*
+&#9200 &#9200
 
 This project delivers a **modern and aesthetic digital clock web application**, designed for both beauty and accurate timekeeping. Drawing inspiration from Coding Snow's elegant designs, it offers a sleek user experience while leveraging a **C backend to ensure highly precise time calculations**.
 
@@ -16,9 +15,8 @@ This project delivers a **modern and aesthetic digital clock web application**, 
 
 Experience the live application here:
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge&logo=github)](YOUR_LIVE_DEMO_URL_HERE)
+[![Live Demo](https://hlo-mayur.github.io/Digital-Clock/)]
 
-*Replace `YOUR_LIVE_DEMO_URL_HERE` with the actual link to your hosted application.*
 
 ## Screenshots
 
@@ -26,9 +24,8 @@ Capture the look and feel of the Digital Clock:
 
 | Digital Clock Display | 12/24 Hour Switch |
 | :-------------------: | :---------------: |
-| ![Screenshot 1](https://via.placeholder.com/600x400?text=Digital+Clock+Screenshot+1) | ![Screenshot 2](https://via.placeholder.com/600x400?text=Digital+Clock+Screenshot+2) |
+| ![Screenshot 1](./images/stopwatch) | ![Screenshot 2](./images/12hr.png) |
 
-*Replace the `https://via.placeholder.com/...` URLs with direct links to your actual screenshots hosted on GitHub or another image hosting service.*
 
 ## Project Structure
 
