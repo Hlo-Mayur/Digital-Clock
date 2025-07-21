@@ -29,14 +29,15 @@ See the digital clock in action:
 ## 📂 Project Structure
 
 Digital Clock/
-├── index.html          # The main HTML file defining the structure of the web clock.
-├── style.css           # Contains all CSS for the clock's visual design, including glowing effects.
-├── script.js           # Frontend JavaScript for UI updates, date/time formatting, and format switching.
-├── clock_server.c      # The C source code for the time backend, responsible for accurate time retrieval.
-├── clock_server        # The compiled executable of the C clock server (e.g., clock_server.exe on Windows).
-├── bridge.js           # JavaScript module handling communication between the frontend and the C backend.
-├── README.md           # This project documentation file.
-
-├── stopwatch.html      # (Optional) HTML for a standalone stopwatch component/page.
-├── stopwatch.css       # (Optional) Stylesheet specifically for the stopwatch component.
-├── stopwatch.js        # (Optional) JavaScript logic for the stopwatch functionality.
+├── index.html      # The main HTML file defining the structure of the web clock.<br>
+├── style.css       # Contains all CSS for the clock's visual design, including glowing effects.<br>  
+├── script.js       # Frontend JavaScript for UI updates, date/time formatting, and format switching.<br>  
+├── clock_server.c  # The C source code for the time backend, responsible for accurate time retrieval.<br>  
+├── clock_server    # The compiled executable of the C clock server (e.g., clock_server.exe on Windows).<br>  
+├── bridge.js       # JavaScript module handling communication between the frontend and the C backend.<br>  
+├── README.md       # This project documentation file.<br>  
+│
+├── stopwatch.html  # (Optional) HTML for a standalone stopwatch component/page.<br> 
+├── stopwatch.css   # (Optional) Stylesheet specifically for the stopwatch component.<br>  
+└── stopwatch.js    # (Optional) JavaScript logic for the stopwatch functionality.<br>  
+```
