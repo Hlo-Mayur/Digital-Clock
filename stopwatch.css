@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(135deg, #232142 0%, #3a2d6a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+}
+.stopwatch-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stopwatch-title span {
+    background: linear-gradient(90deg, #6dd5fa, #ffb86c, #20e3b2, #ff4c4c);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    animation: gradient-move 3s ease-in-out infinite alternate;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    margin-bottom: 1em;
+}
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+#analogStopwatch {
+    background: #232142;
+    border-radius: 50%;
+    box-shadow: 0 0 40px 10px #6dd5fa55, 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin-bottom: 1.5em;
+    margin-top: 0;
+}
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+.stopwatch-controls button, .back-link button {
+    background: #6dd5fa;
+    color: #232142;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6em 1.5em;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #1a1a2e44;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.stopwatch-controls button:hover, .back-link button:hover {
+    background: #ffb86c;
+    color: #fff;
+    transform: scale(1.05);
+}
+.digital-stopwatch-time {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: #6dd5fa;
+    margin: 1.5em 0 1em 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #6dd5fa, 0 0 4px #fff;
+    text-align: center;
+    background: rgba(35, 33, 66, 0.7);
+    border-radius: 10px;
+    display: inline-block;
+    min-width: 220px;
+} 

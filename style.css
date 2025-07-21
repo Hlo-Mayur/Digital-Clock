@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #232142 0%, #3a2d6a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    transition: background 0.7s;
+}
+
+body.light-theme {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+}
+body.neon-theme {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 0.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.5s;
+}
+body.light-theme .title {
+    color: #232142;
+}
+
+.subtitle {
+    color: #b3b3d1;
+    font-size: 1rem;
+    margin-bottom: 2em;
+    transition: color 0.5s;
+}
+body.light-theme .subtitle {
+    color: #3a2d6a;
+}
+
+.theme-controls {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.theme-controls button {
+    background: #29275a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.2em;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #1a1a2e44;
+    transition: background 0.3s, color 0.3s;
+}
+.theme-controls button:hover {
+    background: #6dd5fa;
+    color: #232142;
+}
+body.light-theme .theme-controls button {
+    background: #e0e7ef;
+    color: #232142;
+}
+body.light-theme .theme-controls button:hover {
+    background: #ffb86c;
+    color: #fff;
+}
+
+.clock-card {
+    background: rgba(41, 39, 90, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 40px 10px #6dd5fa55, 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 10px 0 #1a1a2e;
+    padding: 2.5em 3em;
+    display: inline-block;
+    min-width: 340px;
+    position: relative;
+    transition: box-shadow 0.3s, background 0.5s;
+    animation: glow 2.5s infinite alternate;
+}
+@keyframes glow {
+    0% { box-shadow: 0 0 40px 10px #6dd5fa55, 0 8px 32px 0 rgba(31, 38, 135, 0.37); }
+    100% { box-shadow: 0 0 60px 20px #ffb86c88, 0 12px 40px 0 rgba(31, 38, 135, 0.47); }
+}
+body.light-theme .clock-card {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 24px 4px #ffb86c44, 0 2px 8px #b3b3d1;
+}
+body.neon-theme .clock-card {
+    background: rgba(20, 20, 40, 0.98);
+    box-shadow: 0 0 60px 20px #20e3b2cc, 0 8px 32px 0 #0ff;
+}
+
+.clock-time {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #6dd5fa;
+    text-shadow: 0 0 18px #6dd5fa, 0 0 8px #fff;
+    margin-bottom: 0.2em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: color 0.5s;
+}
+.clock-time span {
+    transition: color 0.5s, opacity 0.3s;
+}
+.clock-time .colon {
+    color: #fff;
+    text-shadow: none;
+    transition: color 0.5s;
+}
+#hours, #minutes, #seconds {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    transition: color 0.5s, opacity 0.3s;
+}
+#hours {
+    color: #6dd5fa;
+}
+#minutes {
+    color: #ffb86c;
+}
+#seconds {
+    color: #20e3b2;
+    font-size: 2.2rem;
+    vertical-align: super;
+}
+#ampm {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 0.5em;
+    vertical-align: super;
+}
+body.light-theme .clock-time, body.light-theme #ampm {
+    color: #232142;
+    text-shadow: none;
+}
+body.light-theme #hours {
+    color: #232142;
+}
+body.light-theme #minutes {
+    color: #ffb86c;
+}
+body.light-theme #seconds {
+    color: #20e3b2;
+}
+
+.clock-date {
+    color: #b3b3d1;
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+    transition: color 0.5s;
+}
+body.light-theme .clock-date {
+    color: #3a2d6a;
+}
+
+.clock-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    margin-bottom: 1em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #44436a;
+    border-radius: 24px;
+    transition: 0.4s;
+    box-shadow: 0 0 8px #6dd5fa;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: #6dd5fa;
+    border-radius: 50%;
+    transition: 0.4s;
+    box-shadow: 0 0 8px #6dd5fa;
+}
+.switch input:checked + .slider {
+    background: #ffb86c;
+    box-shadow: 0 0 8px #ffb86c;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+    background: #ffb86c;
+    box-shadow: 0 0 8px #ffb86c;
+}
+.switch-label {
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0.3em;
+    user-select: none;
+    transition: color 0.5s;
+}
+body.light-theme .switch-label {
+    color: #232142;
+}
+
+.alarm-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+.alarm-controls input[type="time"] {
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+    border: 1px solid #6dd5fa;
+    background: #232142;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s, color 0.3s;
+}
+body.light-theme .alarm-controls input[type="time"] {
+    background: #fff;
+    color: #232142;
+    border: 1px solid #ffb86c;
+}
+.alarm-controls button {
+    background: #6dd5fa;
+    color: #232142;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3em 0.8em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.alarm-controls button:hover {
+    background: #ffb86c;
+    color: #fff;
+}
+#alarmStatus {
+    color: #20e3b2;
+    font-size: 1rem;
+    margin-left: 0.5em;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.timezone-display {
+    color: #ffb86c;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    transition: color 0.5s;
+}
+body.light-theme .timezone-display {
+    color: #232142;
+}
+
+.quote-box {
+    background: rgba(32, 227, 178, 0.08);
+    border-left: 4px solid #20e3b2;
+    border-radius: 8px;
+    margin: 1em 0 0.5em 0;
+    padding: 1em 1.5em;
+    color: #fff;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px #20e3b244;
+    transition: background 0.5s, color 0.5s;
+}
+body.light-theme .quote-box {
+    background: #fffbe6;
+    color: #232142;
+    border-left: 4px solid #ffb86c;
+}
+#quote {
+    margin: 0 0 0.5em 0;
+    font-style: italic;
+}
+#quote-author {
+    font-size: 0.95rem;
+    color: #b3b3d1;
+    transition: color 0.5s;
+}
+body.light-theme #quote-author {
+    color: #3a2d6a;
+}
+
+.attractive-title span {
+    background: linear-gradient(90deg, #6dd5fa, #ffb86c, #20e3b2, #ff4c4c);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    animation: gradient-move 3s ease-in-out infinite alternate;
+    display: inline-block;
+}
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.stopwatch-card {
+    background: rgba(41, 39, 90, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 24px 4px #20e3b244, 0 2px 8px #b3b3d1;
+    padding: 1.5em 2em;
+    display: inline-block;
+    min-width: 260px;
+    margin-top: 2em;
+    text-align: center;
+    transition: box-shadow 0.3s, background 0.5s;
+}
+.stopwatch-time {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #6dd5fa;
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #6dd5fa, 0 0 4px #fff;
+}
+.stopwatch-controls button {
+    background: #6dd5fa;
+    color: #232142;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3em 1em;
+    font-size: 1rem;
+    margin: 0 0.3em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.stopwatch-controls button:hover {
+    background: #ffb86c;
+    color: #fff;
+}
+body.light-theme .stopwatch-card {
+    background: #fff;
+    box-shadow: 0 0 16px 2px #ffb86c44, 0 2px 8px #b3b3d1;
+}
+body.light-theme .stopwatch-time {
+    color: #232142;
+    text-shadow: none;
+}
+
+.stopwatch-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.stopwatch-link button {
+    background: linear-gradient(90deg, #6dd5fa, #ffb86c);
+    color: #232142;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7em 2em;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #1a1a2e44;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.stopwatch-link button:hover {
+    background: linear-gradient(90deg, #ffb86c, #6dd5fa);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+    .clock-card {
+        padding: 1.5em 0.5em;
+        min-width: 220px;
+    }
+    .clock-time {
+        font-size: 2.2rem;
+    }
+    .theme-controls {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+} 
