@@ -1,43 +1,42 @@
-# Digital Clock: Precision & Aesthetics
-
-&#9200 &#9200
-
-This project delivers a **modern and aesthetic digital clock web application**, designed for both beauty and accurate timekeeping. Drawing inspiration from Coding Snow's elegant designs, it offers a sleek user experience while leveraging a **C backend to ensure highly precise time calculations**.
-
-## Features
-
-* **Beautiful, Glowing Digital Display:** A visually striking user interface with a smooth, glowing effect for enhanced readability.
-* **12/24-Hour Format Switch:** Seamlessly toggle between 12-hour (AM/PM) and 24-hour time formats to suit your preference.
-* **Current Date Display:** Clearly shows the current date alongside the time.
-* **C-Powered Time Accuracy:** The core time logic is handled by a robust C program, guaranteeing exceptional accuracy.
-
-## Demo
-
-Experience the live application here:
-
-[![Live Demo](https://hlo-mayur.github.io/Digital-Clock/)]
+# Digital Clock: Precision & Aesthetics ⏰✨
 
 
-## Screenshots
+A modern, aesthetic digital clock web application that prioritizes both visual appeal and **uncompromising time accuracy**. Inspired by the sleek designs of Coding Snow, this project integrates a responsive frontend with a robust **C backend for precise time synchronization**, offering a unique blend of web elegance and low-level precision.
 
-Capture the look and feel of the Digital Clock:
+## 🚀 Live Demo
 
-| Digital Clock Display | 12/24 Hour Switch |
-| :-------------------: | :---------------: |
-| ![Screenshot 1](./images/stopwatch) | ![Screenshot 2](./images/12hr.png) |
+Experience the clock in action:
+
+[![Live Demo](https://img.shields.io/badge/View%20Live%20Demo-brightgreen?style=for-the-badge&logo=vercel)](https://hlo-mayur.github.io/Digital-Clock/)
+
+## ✨ Features
+
+* **Beautiful, Glowing Digital UI:** A clean, modern interface with a subtle glowing effect, ensuring excellent readability day or night.
+* **12/24-Hour Format Switch:** Effortlessly toggle between standard 12-hour (AM/PM) and military 24-hour time formats.
+* **Dynamic Date Display:** Always shows the current date alongside the precise time.
+* **C-Powered Time Accuracy:** Leverages a custom C program as a backend for time calculation, ensuring high precision and reliability, independent of typical browser-based timing quirks.
+* **Modular Design:** Separated concerns with dedicated files for HTML structure, CSS styling, and JavaScript logic, making it easy to understand and extend.
+
+## 📸 Screenshots
+
+See the digital clock in action:
+
+| **StopWatch** | **12-Hour Format** |
+| :----------------: | :----------------: |
+| ![Screenshot of 24-hour format](./images/stopwatch.png) | ![Screenshot of 12-hour format](./images/12hr.png) |
 
 
-## Project Structure
+## 📂 Project Structure
 
 Digital Clock/
-├── index.html          // The main HTML structure of the web application
-├── style.css           // Stylesheet for the clock's visual design and aesthetics
-├── script.js           // Frontend JavaScript for interactivity, UI updates, and format switching
-├── clock_server.c      // The C program source responsible for accurate time calculations and serving time data
-├── clock_server        // Compiled executable of the C clock server (Linux/macOS)
-├── bridge.js           // JavaScript to facilitate communication between the frontend and the C backend
-├── README.md           // This project documentation file
+├── index.html          # The main HTML file defining the structure of the web clock.
+├── style.css           # Contains all CSS for the clock's visual design, including glowing effects.
+├── script.js           # Frontend JavaScript for UI updates, date/time formatting, and format switching.
+├── clock_server.c      # The C source code for the time backend, responsible for accurate time retrieval.
+├── clock_server        # The compiled executable of the C clock server (e.g., clock_server.exe on Windows).
+├── bridge.js           # JavaScript module handling communication between the frontend and the C backend.
+├── README.md           # This project documentation file.
 
-├── stopwatch.html      // HTML for a potential separate stopwatch component or page
-├── stopwatch.css       // Stylesheet for the stopwatch component
-├── stopwatch.js        // JavaScript for the stopwatch functionality
+├── stopwatch.html      # (Optional) HTML for a standalone stopwatch component/page.
+├── stopwatch.css       # (Optional) Stylesheet specifically for the stopwatch component.
+├── stopwatch.js        # (Optional) JavaScript logic for the stopwatch functionality.
